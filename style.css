@@ -60,7 +60,7 @@ body{
 }
 .left-top{
     flex: 1 1;
-    width: 100%;
+    max-width: 100%;
 }
 .left-buttom{
     display: flex;
@@ -69,10 +69,10 @@ body{
 }
 .left-buttom-title{
     font-weight: 800;
-    font-size: 57px;
+    font-size: 3em;
     flex: 1 1;
-    min-width: 8ch;
-    max-width: 8ch;
+    min-width: 10ch;
+   
 }
 
 .textplusbtn{
@@ -82,7 +82,7 @@ body{
     color: var(--Dark-grayish-blue);
    
     
-    max-width: 40ch;
+    min-width: 40ch;
     display: flex;
     flex-direction: column;
     justify-content: space-between; 
@@ -108,7 +108,7 @@ body{
     display: flex;
     flex-direction: column;
     gap: 2.5em;
-    max-width: 21em;
+    min-width: 20em;
     background-color: var(--Very-dark-blue);
     color: var(--Off-white);
     padding: 1.8em 1em;
@@ -137,7 +137,7 @@ body{
     cursor: pointer;
 }
 .card-container{
-    padding: 7em 0;
+    padding: 5em 0;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -159,6 +159,9 @@ body{
 .card-num{
     color: var(--Grayish-blue);
 }
+.card-title{
+    font-size: large;
+}
 .card-title:hover{
     color: var(--Soft-red);
     cursor: pointer;
@@ -166,6 +169,89 @@ body{
 .card-info{
     color: var(--Dark-grayish-blue);
 }
-@media screen and (width < 375px) {
-    
+.hide{
+    display: none;
+}
+.mobile-links{
+    display: none;
+}
+@media screen and (width < 700px) {
+    body{
+        padding: 2em 1em;
+        font-size: 15px;
+        font-family: inter, serif;
+    }
+    .container{
+        flex-direction: column ;
+        
+    }
+    .container-left{
+        flex-direction: column ;
+        align-items: center;
+    }
+    .left-buttom-title{
+        font-size: 3em;
+        margin: 0 .2em;
+        width: 90vw;
+       
+    }
+    .left-buttom{
+        flex-direction: column;
+        gap: 0em;
+        margin: 0 1em;
+        width: 95vw;
+       
+    }
+    .textplusbtn{
+        gap: 1em;
+    }
+    .card-container{
+        flex-direction:column;
+        gap: 2em;
+    }
+    .card{
+        gap: 3em;
+    }
+    .card-img{
+        height: 10em;
+    }
+    .card-description{
+        justify-content: space-between;
+    }
+
+
+
+
+    .links{
+        display: none;
+    }
+    .mobile-links{
+        display: none;
+        position:absolute;
+        width: 60%;
+        height: 100vh;
+        color: var(--Dark-grayish-blue);
+        background-color: var(--Off-white);
+        top: 0;
+        right: 0;
+        
+    }
+    .list{
+        display: flex;
+        flex-direction: column;
+        gap: 3em;
+        list-style: none;
+        
+        padding: 10em 1em;
+    }
+    .hamburger{
+        position: absolute;
+        right: 1.5em;
+        top: 2.5em;
+        cursor: pointer;
+
+        height: 2em;
+        width: 2em;
+        z-index: 1;
+    }
 }

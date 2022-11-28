@@ -36,6 +36,18 @@
         <li class="item">Trending</li>
         <li class="item">Categories</li>
       </ul>
+      <img  id="hamburger" onclick="toggleMenu()" class="hamburger" src="./assets/images/icon-menu.svg" alt="hamburger">
+      <img  id="close" onclick="toggleMenu()" class="hamburger" style="display: none;"  src="./assets/images/icon-menu-close.svg" alt="hamburger">
+
+      <ul id="menu" class="mobile-links">
+        <div  class="list">
+        <li class="item">Home</li>
+        <li class="item">New</li>
+        <li class="item">Popular</li>
+        <li class="item">Trending</li>
+        <li class="item">Categories</li>
+        </div>
+      </ul>
     </nav>
     <main class="container">
       <div class="container-left">
@@ -83,9 +95,9 @@
 
     <div class="card-container">
       <div class="card">
-        <img src="./assets/images/image-retro-pcs.jpg" alt="retro pc" />
+        <img class="card-img" src="./assets/images/image-retro-pcs.jpg" alt="retro pc" />
         <div class="card-description">
-          <h2 class="card-num">01</h2>
+          <h1 class="card-num">01</h1>
           <h4 class="card-title">Reviving Retro PCs</h4>
           <p class="card-info">
             What happens when old PCs are given modern upgrades?
@@ -93,9 +105,9 @@
         </div>
       </div>
       <div class="card">
-        <img src="./assets//images/image-top-laptops.jpg" alt="top 10 laptops" />
+        <img  class="card-img" src="./assets//images/image-top-laptops.jpg" alt="top 10 laptops" />
         <div class="card-description">
-          <h2 class="card-num">02</h2>
+          <h1 class="card-num">02</h1>
           <h4 class="card-title">Top 10 Laptops of 2022</h4>
           <p class="card-info">
             Our best picks for various needs and budgets.
@@ -103,9 +115,9 @@
         </div>
       </div>
       <div class="card">
-        <img src="./assets/images/image-gaming-growth.jpg" alt="the growth of gaming" />
+        <img class="card-img" src="./assets/images/image-gaming-growth.jpg" alt="the growth of gaming" />
         <div class="card-description">
-          <h2 class="card-num">03</h2>
+          <h1 class="card-num">03</h1>
           <h4 class="card-title">The Growth of Gaming</h4>
           <p class="card-info">
             How the pandemic has sparked fresh opportunities.
@@ -119,5 +131,16 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Mohamed Ouadjih Boudraa</a>.
     </div>
+    <script>
+      let menu = document.getElementById("menu")
+      let hamburger = document.getElementById("hamburger")
+      let close = document.getElementById("close")
+      function toggleMenu(){
+          menu.style.display === 'none'?
+          (menu.style.display = 'flex',hamburger.style.display = 'none',close.style.display = 'block'):
+          (menu.style.display = 'none',hamburger.style.display = 'block',close.style.display = 'none')
+
+      }
+    </script>
   </body>
 </html>
