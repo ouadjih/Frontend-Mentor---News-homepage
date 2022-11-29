@@ -22,6 +22,7 @@ body{
     padding: 5em 10em;
     font-size: 15px;
     font-family: inter, serif;
+    
 }
 .navbar{
     display: flex;
@@ -51,16 +52,20 @@ body{
 .container{
     display: flex;
     flex-direction: row ;
+    max-width: max-content;
     gap: 2em;
+    
 }
 .container-left{
     display: flex;
     flex-direction: column;
     gap: 1.5em;
+    min-width: 70%;
+   
 }
 .left-top{
-    flex: 1 1;
-    max-width: 100%;
+    width: 100%;
+   
 }
 .left-buttom{
     display: flex;
@@ -73,6 +78,9 @@ body{
     flex: 1 1;
     min-width: 10ch;
    
+}
+.hamburger{
+    display: none;
 }
 
 .textplusbtn{
@@ -108,7 +116,7 @@ body{
     display: flex;
     flex-direction: column;
     gap: 2.5em;
-    min-width: 20em;
+    min-width: 27%;
     background-color: var(--Very-dark-blue);
     color: var(--Off-white);
     padding: 1.8em 1em;
@@ -175,6 +183,8 @@ body{
 .mobile-links{
     display: none;
 }
+
+
 @media screen and (width < 700px) {
     body{
         padding: 2em 1em;
@@ -228,13 +238,23 @@ body{
     .mobile-links{
         display: none;
         position:absolute;
-        width: 60%;
+        width: 70%;
         height: 100vh;
         color: var(--Dark-grayish-blue);
         background-color: var(--Off-white);
         top: 0;
         right: 0;
         
+    }
+    .mask{
+        display: none;
+        position:absolute;
+        width: 30%;
+        height: 100vh;
+        color: var(--Dark-grayish-blue);
+        opacity: .5;
+        top: 0;
+        right: 0;
     }
     .list{
         display: flex;
@@ -244,7 +264,9 @@ body{
         
         padding: 10em 1em;
     }
+
     .hamburger{
+        display: block;
         position: absolute;
         right: 1.5em;
         top: 2.5em;
@@ -255,3 +277,4 @@ body{
         z-index: 1;
     }
 }
+
