@@ -18,9 +18,11 @@ body{
     display:flex;
     flex-direction: column;
     justify-content: center;
+    
     padding: 5em 10em;
     font-size: 15px;
     font-family: inter, serif;
+    max-width: 1440px;
     
 }
 .navbar{
@@ -67,15 +69,14 @@ body{
 }
 .left-buttom{
     display: flex;
-    gap: 7.5em;
+    gap: .5em;
     
 }
 .left-buttom-title{
     font-weight: 800;
     font-size: 3em;
     flex: 1 1;
-    min-width: 10ch;
-   
+    max-width: 10ch;
 }
 .hamburger{
     display: none;
@@ -198,11 +199,11 @@ body{
         flex-direction: column ;
         align-items: center;
     }
+    
     .left-buttom-title{
+        font-weight: 800;
         font-size: 3em;
-        margin: 0 .2em;
-        width: 90vw;
-       
+        max-width: 20ch;
     }
     .left-buttom{
         flex-direction: column;
